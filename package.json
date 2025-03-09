@@ -1,0 +1,17 @@
+{
+  "name": "cooked-nearby-site",
+  "version": "1.0.0",
+  "description": "A landing page built with Tailwind CSS and GSAP",
+  "scripts": {
+    "start:tailwind": "tailwindcss -i ./tailwind-css/tailwind.css -o ./tailwind-css/tailwind-runtime.css --watch",
+    "build:tailwind": "tailwindcss -i ./tailwind-css/tailwind.css -o ./tailwind-css/tailwind-build.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2",
+    "postcss": "^8.4.16",
+    "autoprefixer": "^10.4.12"
+  },
+  "dependencies": {
+    "gsap": "^3.12.2"
+  }
+}
