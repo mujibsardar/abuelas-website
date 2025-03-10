@@ -1,19 +1,31 @@
+<!-- <link rel="stylesheet" href="./css/tailwind-build.css" /> -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cooked Nearby</title>
-    <meta name="description" content="" />
+    <title>Cooked Nearby - Community Meals, Real Connections</title>
+    <meta
+      name="description"
+      content="Discover delicious homemade meals from cooks in your neighborhood. Earn money sharing your cooking, and ditch corporate food delivery for good."
+    />
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Title of the project" />
-    <meta property="og:description" content="" />
+    <meta
+      property="og:title"
+      content="Cooked Nearby - Community Meals, Real Connections"
+    />
+    <meta
+      property="og:description"
+      content="Discover delicious homemade meals from cooks in your neighborhood. Earn money sharing your cooking, and ditch corporate food delivery for good."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://github.com/PaulleDemon" />
-    <!--Replace with the current website url-->
-    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://cookednearby.com" />
+    <!-- Replace with the current website url-->
+    <meta property="og:image" content="./assets/images/home/iphone.png" />
+    <!-- Replace with a relevant image -->
 
     <link rel="stylesheet" href="./tailwind-css/tailwind-runtime.css" />
     <!-- <link rel="stylesheet" href="./css/tailwind-build.css" /> -->
@@ -49,21 +61,21 @@
         <div
           class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
         >
-          <a class="header-links" href=""> About us </a>
-          <a class="header-links" href="#pricing"> Pricing </a>
-          <a class="header-links" href=""> Features </a>
-          <a class="header-links" href=""> Blog </a>
-          <a class="header-links" href=""> Contact us </a>
+          <!-- <a class="header-links" href="#about"> About us </a> -->
+          <a class="header-links" href="#cooks"> For Cooks </a>
+          <a class="header-links" href="#customers"> For Customers </a>
+          <a class="header-links" href="#blog"> Blog </a>
+          <a class="header-links" href="#contact"> Contact us </a>
         </div>
         <div
           class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
         >
           <a
-            href=""
-            aria-label="signup"
+            href="#download"
+            aria-label="download"
             class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white"
           >
-            <span>Download</span>
+            <span>Download App</span>
             <div
               class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-primary tw-font-semibold tw-text-black"
             >
@@ -90,22 +102,30 @@
           <div
             class="tw-flex tw-flex-wrap tw-text-6xl tw-font-semibold tw-uppercase tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug"
           >
-            <span class="reveal-hero-text"> Negotiation better </span>
+            <span class="reveal-hero-text"> Cooks Nearby, </span>
             <br />
-            <span class="reveal-hero-text"> with AI. </span>
+            <span class="reveal-hero-text"> Food You Love. </span>
           </div>
           <div
             class="reveal-hero-text tw-mt-2 tw-max-w-[450px] tw-p-2 tw-text-justify max-lg:tw-max-w-full"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
-            adipisci corrupti accusamus reiciendis similique assumenda nostrum
-            fuga dicta vitae ipsum.
+            Tired of the same old fast food delivery apps lining corporate
+            pockets while serving up processed meals? Cooked Nearby connects you
+            with passionate home cooks in your neighborhood, offering fresh,
+            delicious, and affordable dishes made with love. Support your
+            community, eat real food, and maybe even make some extra cash doing
+            what you love!
           </div>
 
           <div
             class="reveal-hero-text tw-mt-4 tw-flex tw-place-items-center tw-gap-4 tw-overflow-hidden tw-p-2"
           >
-            <a class="tw-h-[50px] tw-max-w-[150px]" href="">
+            <a
+              class="tw-h-[50px] tw-max-w-[150px]"
+              href="https://apps.apple.com/your-app-store-link"
+              aria-label="Download on the App Store"
+            >
+              <!-- Replace with your App Store link -->
               <img
                 src="./assets/images/brand-logos/app-store-badge.png"
                 alt="app store"
@@ -113,10 +133,15 @@
                 srcset=""
               />
             </a>
-            <a class="tw-h-[50px] tw-max-w-[150px]" href="">
+            <a
+              class="tw-h-[50px] tw-max-w-[150px]"
+              href="https://play.google.com/store/apps/details?id=your.package.name"
+              aria-label="Get it on Google Play"
+            >
+              <!-- Replace with your Google Play link -->
               <img
                 src="./assets/images/brand-logos/google-play-badge.png"
-                alt="app store"
+                alt="google play"
                 class="tw-h-full tw-w-full"
                 srcset=""
               />
@@ -146,8 +171,9 @@
     </section>
     <section
       class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+      id="about"
     >
-      <div
+      <!-- <div
         class="reveal-up tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[80%] tw-place-items-center tw-justify-around tw-gap-8 tw-rounded-xl tw-bg-[#e7e6e685] tw-p-4 max-lg:tw-max-w-full max-md:tw-flex-col"
       >
         <div class="tw-flex tw-flex-col tw-place-items-center tw-gap-4">
@@ -159,56 +185,49 @@
             <i class="bi bi-star-half"></i>
           </div>
           <span class="tw-text-lg">
-            <b>4.2/5</b>
-            <span>from 18k reviews</span>
+            <b>4.7/5</b>
+            <span>Average Cook Rating</span>
           </span>
           <img
-            src="./assets/images/brand-logos/capterra.svg"
-            alt="capterra"
+            src="./assets/images/brand-logos/community-logo.svg"
+            alt="community"
             class="tw-h-[80px] tw-w-[250px]"
           />
         </div>
         <div class="tw-flex tw-flex-col tw-place-items-center tw-gap-4">
           <div class="tw-flex tw-text-xl tw-text-orange-500">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-half"></i>
+            <i class="bi bi-people-fill"></i>
           </div>
           <span class="tw-text-lg">
-            <b>4.6/5</b>
-            <span>from 20k reviews</span>
+            <b>10,000+</b>
+            <span>Happy Users</span>
           </span>
           <img
-            src="./assets/images/brand-logos/G2.svg"
-            alt="G2"
+            src="./assets/images/brand-logos/user-count-logo.svg"
+            alt="users"
             class="tw-h-[80px]"
           />
         </div>
         <div class="tw-flex tw-flex-col tw-place-items-center tw-gap-4">
           <div class="tw-flex tw-text-xl tw-text-orange-500">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-half"></i>
+            <i class="bi bi-cash-coin"></i>
           </div>
           <span class="tw-text-lg">
-            <b>4.5/5</b>
-            <span>from 6k reviews</span>
+            <b>$50,000+</b>
+            <span>Earned by Cooks</span>
           </span>
           <img
-            src="./assets/images/brand-logos/trust-pilot.svg"
-            alt="capterra"
+            src="./assets/images/brand-logos/money-logo.svg"
+            alt="earnings"
             class="tw-h-[80px] tw-w-[250px]"
           />
         </div>
-      </div>
+      </div> -->
     </section>
 
     <section
       class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-p-6"
+      id="cooks"
     >
       <div
         class="reveal-up tw-flex tw-min-h-[60vh] tw-place-content-center tw-place-items-center tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
@@ -216,33 +235,37 @@
         <div class="tw-flex">
           <div class="tw-h-[450px] tw-w-[300px]">
             <img
-              src="./assets/images/home/2.png"
-              alt="product1"
+              src="./assets/images/home/cook-1.jpeg"
+              alt="Cook delicious meals"
               class="tw-h-full tw-w-full tw-object-contain"
             />
           </div>
         </div>
         <div class="tw-mt-6 tw-flex tw-max-w-[450px] tw-flex-col tw-gap-4">
-          <h3 class="tw-text-4xl tw-font-medium">Highly secure</h3>
+          <h3 class="tw-text-4xl tw-font-medium">
+            Love to Cook? Share Your Passion.
+          </h3>
 
           <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
             <h4 class="tw-text-xl tw-font-medium">
               <i class="bi bi-check-all !tw-text-2xl"></i>
-              DDOS protection
+              Earn Extra Income
             </h4>
             <span class="tw-text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Reiciendis commodi temporibus at? Aspernatur, a necessitatibus?
+              Turn your kitchen skills into a side hustle! Offer your delicious
+              homemade meals to hungry neighbors and earn money doing what you
+              love. Set your own prices and schedule.
             </span>
           </div>
           <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
             <h4 class="tw-text-xl tw-font-medium">
               <i class="bi bi-check-all !tw-text-2xl"></i>
-              CSRF protection
+              Connect with Your Community
             </h4>
             <span class="tw-text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Reiciendis commodi temporibus at? Aspernatur, a necessitatibus?
+              Share your culinary creations and build real connections with
+              people nearby. Become a local food hero and foster a stronger,
+              tastier community.
             </span>
           </div>
         </div>
@@ -251,31 +274,36 @@
 
     <section
       class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-p-6"
+      id="customers"
     >
       <div
         class="reveal-up tw-flex tw-min-h-[60vh] tw-place-content-center tw-place-items-center tw-gap-[10%] max-lg:tw-flex-col max-lg:tw-gap-10"
       >
         <div class="tw-mt-6 tw-flex tw-max-w-[450px] tw-flex-col tw-gap-4">
-          <h3 class="tw-text-4xl tw-font-medium">Lightning speed</h3>
+          <h3 class="tw-text-4xl tw-font-medium">
+            Hungry? Discover Real Home Cooking.
+          </h3>
 
           <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
             <h4 class="tw-text-xl tw-font-medium">
               <i class="bi bi-check-all !tw-text-2xl"></i>
-              10x Speed
+              Escape the Fast Food Rut
             </h4>
             <span class="tw-text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Reiciendis commodi temporibus at? Aspernatur, a necessitatibus?
+              Say goodbye to greasy takeout and hello to wholesome, home-cooked
+              meals! Find diverse and delicious options made by cooks right in
+              your neighborhood.
             </span>
           </div>
           <div class="tw-mt-4 tw-flex tw-flex-col tw-gap-3">
             <h4 class="tw-text-xl tw-font-medium">
               <i class="bi bi-check-all !tw-text-2xl"></i>
-              CSRF protection
+              Support Local, Not Corporate
             </h4>
             <span class="tw-text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Reiciendis commodi temporibus at? Aspernatur, a necessitatibus?
+              Every meal you order on Cooked Nearby directly supports a local
+              cook, not a giant corporation. Feel good about your food choices
+              and invest in your community.
             </span>
           </div>
         </div>
@@ -283,8 +311,8 @@
         <div class="tw-flex">
           <div class="tw-h-[450px] tw-w-[300px]">
             <img
-              src="./assets/images/home/4.png"
-              alt="product1"
+              src="./assets/images/home/app-1.jpeg"
+              alt="Order homemade food"
               class="tw-h-full tw-w-full tw-object-contain"
             />
           </div>
@@ -294,24 +322,26 @@
 
     <section
       class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+      id="features"
     >
       <div
         class="reveal-up tw-flex tw-min-h-[300px] tw-w-full tw-place-content-center tw-place-items-center tw-gap-8 tw-rounded-xl tw-p-4 max-lg:tw-flex-col"
       >
         <div
-          class="tw-flex tw-h-[450px] tw-w-[350px] tw-flex-col tw-gap-[5%] tw-rounded-xl tw-bg-[#FFD5CA] tw-p-8"
+          class="tw-flex tw-h-[450px] tw-w-[350px] tw-flex-col tw-gap-[5%] tw-rounded-xl tw-bg-secondary tw-p-8"
         >
           <div
             class="tw-flex tw-h-[80px] tw-w-[80px] tw-place-content-center tw-items-center tw-rounded-full tw-bg-white"
           >
-            <i class="material-icons md-40">bolt</i>
+            <i class="material-icons md-40">search</i>
           </div>
 
-          <h3 class="tw-mt-5 tw-text-3xl tw-font-medium">Lightning fast</h3>
+          <h3 class="tw-mt-5 tw-text-3xl tw-font-medium">
+            Discover Local Cooks
+          </h3>
           <p class="tw-text-lg">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates
-            tenetur officiis temporibus natus ratione nam officia tempore
-            nostrum esse tempora.
+            Easily find talented home cooks in your neighborhood. Browse menus,
+            read profiles, and discover your new favorite meal.
           </p>
         </div>
 
@@ -321,14 +351,17 @@
           <div
             class="tw-flex tw-h-[80px] tw-w-[80px] tw-place-content-center tw-items-center tw-rounded-full tw-bg-white"
           >
-            <i class="material-icons md-40">forum</i>
+            <i class="material-icons md-40">shopping_cart</i>
           </div>
 
-          <h3 class="tw-mt-5 tw-text-3xl tw-font-medium">Negotiate better</h3>
+          <h3 class="tw-mt-5 tw-text-3xl tw-font-medium">
+            Easy Ordering & Payment
+          </h3>
           <p class="tw-text-lg">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates
-            tenetur officiis temporibus natus ratione nam officia tempore
-            nostrum esse tempora.
+            Order meals directly through the app. Currently, orders are for
+            pickup only—delivery isn’t available yet. When you order, you pay
+            the cook directly using their preferred payment method. Plus, you
+            can browse meals available within a radius of your choice.
           </p>
         </div>
         <div
@@ -337,14 +370,15 @@
           <div
             class="tw-flex tw-h-[80px] tw-w-[80px] tw-place-content-center tw-items-center tw-rounded-full tw-bg-white"
           >
-            <i class="material-icons md-40">shield</i>
+            <i class="material-icons md-40">chat_bubble</i>
           </div>
 
-          <h3 class="tw-mt-5 tw-text-3xl tw-font-medium">Secure</h3>
+          <h3 class="tw-mt-5 tw-text-3xl tw-font-medium">
+            Direct Cook Communication
+          </h3>
           <p class="tw-text-lg">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates
-            tenetur officiis temporibus natus ratione nam officia tempore
-            nostrum esse tempora.
+            Have questions or special requests? Chat directly with your cook
+            within the app for a personalized experience.
           </p>
         </div>
       </div>
@@ -354,7 +388,7 @@
       class="tw-mt-5 tw-flex tw-min-h-[60vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-bg-black tw-p-[2%] tw-text-white max-lg:tw-min-h-[40vh]"
     >
       <h3 class="reveal-up tw-text-5xl tw-font-medium max-md:tw-text-2xl">
-        Clients love us
+        What Our Community Says
       </h3>
       <!-- Testimonials -->
       <div class="reveal-up tw-max-w-[750px] max-md:tw-max-w-[100vw]">
@@ -369,20 +403,21 @@
                     class="tw-h-[150px] tw-w-[150px] tw-overflow-hidden tw-rounded-full max-lg:tw-h-[80px] max-lg:tw-w-[80px]"
                   >
                     <img
-                      src="./assets/images/people/women.jpg"
+                      src="./assets/images/people/cook-testimonial-1.jpg"
                       class="tw-h-full tw-w-full tw-object-cover"
-                      alt="women"
+                      alt="Sarah J."
                     />
                   </div>
                 </div>
                 <div class="tw-flex tw-max-w-[450px] tw-flex-col tw-gap-4">
                   <p class="tw-mt-4 tw-italic tw-text-gray-200">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptate, sequi sunt velit aut omnis nulla ut, autem
-                    corrupti nemo optio ipsam amet ducimus illum? Repellendus
-                    itaque autem alias eos quis.
+                    "Cooked Nearby has been a game-changer for my family. We eat
+                    so much healthier now, and it's actually more affordable
+                    than ordering from those big delivery chains. Plus, it's
+                    great knowing I'm supporting someone in my own
+                    neighborhood!"
                   </p>
-                  <b>- Ferman</b>
+                  <b>- Sarah J., Happy Customer</b>
                 </div>
               </div>
             </div>
@@ -395,20 +430,20 @@
                     class="tw-h-[150px] tw-w-[150px] tw-overflow-hidden tw-rounded-full max-lg:tw-h-[80px] max-lg:tw-w-[80px]"
                   >
                     <img
-                      src="./assets/images/people/women.jpg"
+                      src="./assets/images/people/cook-testimonial-2.jpg"
                       class="tw-h-full tw-w-full tw-object-cover"
-                      alt="women"
+                      alt="Michael L."
                     />
                   </div>
                 </div>
                 <div class="tw-flex tw-max-w-[450px] tw-flex-col tw-gap-4">
                   <p class="tw-mt-4 tw-italic tw-text-gray-200">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptate, sequi sunt velit aut omnis nulla ut, autem
-                    corrupti nemo optio ipsam amet ducimus illum? Repellendus
-                    itaque autem alias eos quis.
+                    "I love to cook, but sometimes it feels like a waste just
+                    cooking for myself. Cooked Nearby lets me share my passion
+                    and earn some extra money while doing it. It's been an
+                    amazing way to connect with my neighbors and share my food!"
                   </p>
-                  <b>- Ferman</b>
+                  <b>- Michael L., Home Cook</b>
                 </div>
               </div>
             </div>
@@ -436,105 +471,87 @@
 
     <section
       class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
-      id=""
+      id="blog"
     >
       <div class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5">
         <div
           class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
         >
           <h2 class="tw-text-4xl tw-font-semibold">
-            Take your negotiation to next level
+            Explore Delicious & Community-Focused Food
           </h2>
+          <p class="tw-text-gray-600">
+            Read our blog for food inspiration, community stories, and cooking
+            tips.
+          </p>
         </div>
         <div
-          class="tw-mt-6 tw-flex tw-max-w-[60%] tw-flex-wrap tw-place-content-center tw-gap-2 max-lg:tw-flex-col"
+          class="tw-mt-6 tw-flex tw-max-w-[60%] tw-flex-wrap tw-place-content-center tw-gap-8 max-lg:tw-flex-col"
         >
           <div
-            class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4"
+            class="reveal-up tw-flex tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4"
           >
-            <!-- <img src="./assets/images/home/sample.jpg" 
+            <!-- <img src="./assets/images/home/sample.jpg"
                                 alt="feature1"> -->
             <div class="tw-flex tw-gap-1">
-              <i class="bi bi-boombox-fill tw-text-2xl"></i>
-              <h3 class="tw-text-2xl tw-font-semibold">Feature 1</h3>
+              <i class="bi bi-mortarboard-fill tw-text-2xl"></i>
+              <h3 class="tw-text-2xl tw-font-semibold">
+                Community Cooking 101
+              </h3>
             </div>
             <div class="tw-text-[#595959]">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Learn the basics of sharing your homemade meals and building your
+              local food network.
             </div>
+            <a href="#" class="tw-text-primary tw-font-semibold hover:underline"
+              >Read More</a
+            >
+          </div>
+          <div
+            class="reveal-up tw-flex tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4"
+          >
+            <!-- <img src="./assets/images/home/sample.jpg"
+                                alt="feature1"> -->
+            <div class="tw-flex tw-gap-1">
+              <i class="bi bi-heart-fill tw-text-2xl"></i>
+              <h3 class="tw-text-2xl tw-font-semibold">
+                Why Community Food Matters
+              </h3>
+            </div>
+            <div class="tw-text-[#595959]">
+              Discover the social and economic benefits of choosing
+              community-driven food over corporate chains.
+            </div>
+            <a href="#" class="tw-text-primary tw-font-semibold hover:underline"
+              >Read More</a
+            >
           </div>
           <div
             class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4"
           >
-            <!-- <img src="./assets/images/home/sample.jpg" 
+            <!-- <img src="./assets/images/home/sample.jpg"
                                 alt="feature1"> -->
             <div class="tw-flex tw-gap-1">
-              <i class="bi bi-0-circle-fill tw-text-2xl"></i>
-              <h3 class="tw-text-2xl tw-font-semibold">Feature 2</h3>
+              <i class="bi bi-lightbulb-fill tw-text-2xl"></i>
+              <h3 class="tw-text-2xl tw-font-semibold">
+                Recipe Inspiration: Cook & Share!
+              </h3>
             </div>
             <div class="tw-text-[#595959]">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Get inspired with delicious and easy recipes perfect for sharing
+              with your neighbors on Cooked Nearby.
             </div>
-          </div>
-          <div
-            class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4"
-          >
-            <!-- <img src="./assets/images/home/sample.jpg" 
-                                alt="feature1"> -->
-            <div class="tw-flex tw-gap-1">
-              <i class="bi bi-0-square-fill tw-text-2xl"></i>
-              <h3 class="tw-text-2xl tw-font-semibold">Feature 3</h3>
-            </div>
-            <div class="tw-text-[#595959]">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </div>
-          </div>
-          <div
-            class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4"
-          >
-            <!-- <img src="./assets/images/home/sample.jpg" 
-                                alt="feature1"> -->
-            <div class="tw-flex tw-gap-1">
-              <i class="bi bi-airplane-engines-fill tw-text-2xl"></i>
-              <h3 class="tw-text-2xl tw-font-semibold">Feature 4</h3>
-            </div>
-            <div class="tw-text-[#595959]">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </div>
-          </div>
-          <div
-            class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4"
-          >
-            <!-- <img src="./assets/images/home/sample.jpg" 
-                                alt="feature1"> -->
-            <div class="tw-flex tw-gap-1">
-              <i class="bi bi-cake-fill tw-text-2xl"></i>
-              <h3 class="tw-text-2xl tw-font-semibold">Feature 5</h3>
-            </div>
-            <div class="tw-text-[#595959]">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </div>
-          </div>
-          <div
-            class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4"
-          >
-            <!-- <img src="./assets/images/home/sample.jpg" 
-                                alt="feature1"> -->
-            <div class="tw-flex tw-gap-1">
-              <i class="bi bi-shield-fill tw-text-2xl"></i>
-              <h3 class="tw-text-2xl tw-font-semibold">Feature 6</h3>
-            </div>
-            <div class="tw-text-[#595959]">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </div>
+            <a href="#" class="tw-text-primary tw-font-semibold hover:underline"
+              >Read More</a
+            >
           </div>
         </div>
-
         <a
-          href=""
+          href="#download"
           aria-label="download"
-          class="reveal-up tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white"
+          class="reveal-up tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white tw-mt-8"
         >
-          <span>Download</span>
+          <span>Download App</span>
           <div
             class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-primary tw-font-semibold tw-text-black"
           >
@@ -546,96 +563,76 @@
 
     <section
       class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[2%]"
+      id="pricing"
     >
       <h3 class="reveal-up tw-text-4xl tw-font-medium max-md:tw-text-2xl">
-        Read our articles for more insights
+        Simple & Fair Pricing
       </h3>
       <!-- pricing -->
       <div
         class="reveal-up tw-mt-10 tw-flex tw-flex-wrap tw-place-content-center tw-gap-10 max-lg:tw-flex-col"
       >
-        <a
+        <div
           href=""
           class="tw-flex tw-h-[400px] tw-w-[350px] tw-flex-col tw-gap-2 tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-4 tw-shadow-xl max-lg:tw-w-[300px]"
         >
           <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
             <img
-              src="./assets/images/home/sample.jpg"
-              alt="article image"
+              src="./assets/images/home/cook-2.jpeg"
+              alt="Cook Pricing"
               class="tw-h-full tw-w-full tw-object-cover"
               srcset=""
             />
           </div>
           <h3 class="tw-text-2xl tw-font-semibold max-md:tw-text-xl">
-            Article 1
+            For Cooks
           </h3>
           <p class="tw-mt-2 tw-text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-            explicabo!
+            List your meals for free! We take a small, community-sustaining fee
+            only when you make a sale, ensuring you keep the majority of your
+            earnings.
           </p>
-          <span>
-            <span>Learn more</span>
+          <span class="tw-mt-auto">
+            <span class="tw-font-semibold">Get Started Cooking</span>
             <i class="bi bi-arrow-right"></i>
           </span>
-        </a>
-        <a
+        </div>
+        <div
           href=""
           class="tw-flex tw-h-[400px] tw-w-[350px] tw-flex-col tw-gap-2 tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-4 tw-shadow-xl max-lg:tw-w-[300px]"
         >
           <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
             <img
-              src="./assets/images/home/sample.jpg"
-              alt="article image"
+              src="./assets/images/home/customer-1.jpeg"
+              alt="Customer Pricing"
               class="tw-h-full tw-w-full tw-object-cover"
               srcset=""
             />
           </div>
           <h3 class="tw-text-2xl tw-font-semibold max-md:tw-text-xl">
-            Article 2
+            For Customers
           </h3>
           <p class="tw-mt-2 tw-text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-            explicabo!
+            Enjoy delicious, affordable meals with a small service fee that
+            helps us maintain the platform and support our community of cooks.
+            Fair prices for everyone.
           </p>
-          <span>
-            <span>Learn more</span>
+          <span class="tw-mt-auto">
+            <span class="tw-font-semibold">Start Ordering</span>
             <i class="bi bi-arrow-right"></i>
           </span>
-        </a>
-        <a
-          href=""
-          class="tw-flex tw-h-[400px] tw-w-[350px] tw-flex-col tw-gap-2 tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-4 tw-shadow-xl max-lg:tw-w-[300px]"
-        >
-          <div class="tw-h-[200px] tw-w-full tw-overflow-hidden tw-rounded-md">
-            <img
-              src="./assets/images/home/sample.jpg"
-              alt="article image"
-              class="tw-h-full tw-w-full tw-object-cover"
-              srcset=""
-            />
-          </div>
-          <h3 class="tw-text-2xl tw-font-semibold max-md:tw-text-xl">
-            Article 3
-          </h3>
-          <p class="tw-mt-2 tw-text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-            explicabo!
-          </p>
-          <span>
-            <span>Learn more</span>
-            <i class="bi bi-arrow-right"></i>
-          </span>
-        </a>
+        </div>
       </div>
     </section>
 
     <section
       class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]"
+      id="contact"
     >
       <div
         class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-3"
       >
-        <h2 class="tw-text-xl max-md:tw-text-lg">Keep yourself updated</h2>
+        <h2 class="tw-text-xl max-md:tw-text-lg">Stay in the Loop!</h2>
 
         <div
           class="tw-flex tw-h-[60px] tw-place-items-center tw-gap-2 tw-overflow-hidden tw-p-2"
@@ -643,9 +640,13 @@
           <input
             type="email"
             class="input tw-h-full tw-w-full tw-p-2 tw-outline-none"
-            placeholder="email"
+            placeholder="Your email address"
           />
-          <a class="btn tw-transition-colors tw-duration-[0.3s]" href="">
+          <a
+            class="btn tw-transition-colors tw-duration-[0.3s]"
+            href=""
+            aria-label="Sign up for newsletter"
+          >
             Signup
           </a>
         </div>
@@ -660,52 +661,55 @@
       >
         <img
           src="./assets/logo.png"
-          alt="logo"
+          alt="Cooked Nearby Logo"
           srcset=""
           class="tw-max-w-[120px]"
         />
-        <div>
-          2 Lord Edward St,
-          <br />
-          D02 P634,
-          <br />
-          United Kingdom
-        </div>
+        <div>Los Angeles, CA</div>
         <div class="tw-mt-3 tw-text-lg tw-font-semibold">Follow us</div>
         <div class="tw-flex tw-gap-4 tw-text-2xl">
-          <a href="" aria-label="Facebook">
+          <a
+            href="https://facebook.com/your-facebook-page"
+            aria-label="Facebook"
+          >
+            <!-- Replace with your Facebook page -->
             <i class="bi bi-facebook"></i>
           </a>
-          <a href="https://twitter.com/@pauls_freeman" aria-label="Twitter">
+          <a
+            href="https://twitter.com/your-twitter-handle"
+            aria-label="Twitter"
+          >
+            <!-- Replace with your Twitter handle -->
             <i class="bi bi-twitter"></i>
           </a>
           <a
-            href="https://instagram.com/"
-            class="tw-h-[40px] tw-w-[40px]"
+            href="https://instagram.com/your-instagram-handle"
             aria-label="Instagram"
+            class="tw-h-[40px] tw-w-[40px]"
           >
+            <!-- Replace with your Instagram handle -->
             <i class="bi bi-instagram"></i>
           </a>
         </div>
       </div>
 
       <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
-        <h2 class="tw-text-3xl max-md:tw-text-xl">Company</h2>
+        <h2 class="tw-text-3xl max-md:tw-text-xl">Cooked Nearby</h2>
         <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
-          <a href="" class="footer-link">Pricing</a>
-          <a href="" class="footer-link">FAQ</a>
-          <a href="" class="footer-link">Contact Us</a>
+          <!-- <a href="#pricing" class="footer-link">Pricing</a> -->
+          <!-- <a href="#faq" class="footer-link">FAQ</a> -->
+          <a href="#contact" class="footer-link">Contact Us</a>
         </div>
       </div>
 
       <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
         <h2 class="tw-text-3xl max-md:tw-text-xl">Resources</h2>
         <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
-          <a href="" class="footer-link">About us</a>
-          <a href="" class="footer-link">FAQ</a>
-          <a href="" class="footer-link">Contact Us</a>
-          <a href="" class="footer-link">Blogs</a>
-          <a href="" class="footer-link">Privacy policy</a>
+          <!-- <a href="#about" class="footer-link">About us</a> -->
+          <a href="#cooks" class="footer-link">For Cooks</a>
+          <a href="#contact" class="footer-link">Contact Us</a>
+          <a href="#blog" class="footer-link">Blog</a>
+          <!-- <a href="#privacy-policy" class="footer-link">Privacy policy</a> -->
         </div>
       </div>
     </footer>
