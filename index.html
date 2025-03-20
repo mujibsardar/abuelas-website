@@ -64,16 +64,16 @@
           <!-- <a class="header-links" href="#about"> About us </a> -->
           <a class="header-links" href="#cooks"> For Cooks </a>
           <a class="header-links" href="#customers"> For Customers </a>
+          <a class="header-links" href="#faq"> FAQ </a>
           <a class="header-links" href="#blog"> Blog </a>
           <a class="header-links" href="#contact"> Contact us </a>
         </div>
-        <div
-          class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
-        >
+        <!-- Stick Download Now to the Bottom of the Page -->
+        <div class="tw-fixed tw-bottom-5 tw-right-5 tw-z-50">
           <a
             href="#download"
             aria-label="download"
-            class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white"
+            class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white tw-shadow-lg tw-transition tw-duration-300 hover:tw-bg-opacity-90"
           >
             <span>Download App</span>
             <div
@@ -133,19 +133,22 @@
                 srcset=""
               />
             </a>
-            <a
+            <span class="tw-text-xs tw-text-gray-500 tw-italic">
+              * This app is currently in beta and may have some bugs.
+            </span>
+            <!-- <a
               class="tw-h-[50px] tw-max-w-[150px]"
               href="https://play.google.com/store/apps/details?id=your.package.name"
               aria-label="Get it on Google Play"
-            >
-              <!-- Replace with your Google Play link -->
-              <img
+            > -->
+            <!-- Replace with your Google Play link -->
+            <!-- <img
                 src="./assets/images/brand-logos/google-play-badge.png"
                 alt="google play"
                 class="tw-h-full tw-w-full"
                 srcset=""
               />
-            </a>
+            </a> -->
           </div>
         </div>
 
@@ -354,14 +357,12 @@
             <i class="material-icons md-40">shopping_cart</i>
           </div>
 
-          <h3 class="tw-mt-5 tw-text-3xl tw-font-medium">
-            Easy Ordering & Payment
-          </h3>
+          <h3 class="tw-mt-5 tw-text-3xl tw-font-medium">Easy Ordering</h3>
           <p class="tw-text-lg">
-            Order meals directly through the app. Currently, orders are for
-            pickup only—delivery isn’t available yet. When you order, you pay
-            the cook directly using their preferred payment method. Plus, you
-            can browse meals available within a radius of your choice.
+            Order meals directly through the app with both pickup and delivery
+            options available. When you order, you pay the cook directly using
+            their preferred payment method. Plus, you can browse meals available
+            within a radius of your choice.
           </p>
         </div>
         <div
@@ -386,84 +387,112 @@
 
     <section
       class="tw-mt-5 tw-flex tw-min-h-[60vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-bg-black tw-p-[2%] tw-text-white max-lg:tw-min-h-[40vh]"
+      id="faq"
     >
       <h3 class="reveal-up tw-text-5xl tw-font-medium max-md:tw-text-2xl">
-        What Our Community Says
+        Frequently Asked Questions
       </h3>
-      <!-- Testimonials -->
-      <div class="reveal-up tw-max-w-[750px] max-md:tw-max-w-[100vw]">
-        <div class="swiper tw-mt-8 tw-flex tw-flex-col tw-gap-10 tw-space-y-8">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide tw-flex tw-place-content-center">
-              <div
-                class="tw-flex tw-h-fit tw-max-w-[750px] tw-place-content-center tw-place-items-center tw-gap-10 tw-rounded-lg tw-p-4 tw-shadow-lg"
-              >
-                <div class="tw-flex tw-place-items-center">
-                  <div
-                    class="tw-h-[150px] tw-w-[150px] tw-overflow-hidden tw-rounded-full max-lg:tw-h-[80px] max-lg:tw-w-[80px]"
-                  >
-                    <img
-                      src="./assets/images/people/cook-testimonial-1.jpg"
-                      class="tw-h-full tw-w-full tw-object-cover"
-                      alt="Sarah J."
-                    />
-                  </div>
-                </div>
-                <div class="tw-flex tw-max-w-[450px] tw-flex-col tw-gap-4">
-                  <p class="tw-mt-4 tw-italic tw-text-gray-200">
-                    "Cooked Nearby has been a game-changer for my family. We eat
-                    so much healthier now, and it's actually more affordable
-                    than ordering from those big delivery chains. Plus, it's
-                    great knowing I'm supporting someone in my own
-                    neighborhood!"
-                  </p>
-                  <b>- Sarah J., Happy Customer</b>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide tw-flex tw-place-content-center">
-              <div
-                class="tw-flex tw-h-fit tw-max-w-[750px] tw-place-content-center tw-place-items-center tw-gap-10 tw-rounded-lg tw-p-4 tw-shadow-lg"
-              >
-                <div class="tw-flex tw-place-items-center">
-                  <div
-                    class="tw-h-[150px] tw-w-[150px] tw-overflow-hidden tw-rounded-full max-lg:tw-h-[80px] max-lg:tw-w-[80px]"
-                  >
-                    <img
-                      src="./assets/images/people/cook-testimonial-2.jpg"
-                      class="tw-h-full tw-w-full tw-object-cover"
-                      alt="Michael L."
-                    />
-                  </div>
-                </div>
-                <div class="tw-flex tw-max-w-[450px] tw-flex-col tw-gap-4">
-                  <p class="tw-mt-4 tw-italic tw-text-gray-200">
-                    "I love to cook, but sometimes it feels like a waste just
-                    cooking for myself. Cooked Nearby lets me share my passion
-                    and earn some extra money while doing it. It's been an
-                    amazing way to connect with my neighbors and share my food!"
-                  </p>
-                  <b>- Michael L., Home Cook</b>
-                </div>
-              </div>
-            </div>
+      <div class="reveal-up tw-max-w-[750px] max-md:tw-max-w-[100vw] tw-mt-8">
+        <div class="tw-space-y-6">
+          <!-- App Availability -->
+          <div class="faq-item">
+            <h4 class="tw-text-3xl tw-font-semibold">
+              Is the app available on Android?
+            </h4>
+            <p class="tw-mt-2 tw-text-gray-200">
+              Currently, the app is only available on the Apple App Store for
+              iOS devices. An Android version is coming soon—stay tuned for
+              updates!
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4 class="tw-text-3xl tw-font-semibold">
+              How do I place an order?
+            </h4>
+            <p class="tw-mt-2 tw-text-gray-200">
+              Browse local meals, select your favorite, and choose either pickup
+              or delivery. When you order, you pay the cook directly using their
+              preferred payment method.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4 class="tw-text-3xl tw-font-semibold">
+              What payment methods are accepted?
+            </h4>
+            <p class="tw-mt-2 tw-text-gray-200">
+              Payments are made directly to the cook, so you’ll use the method
+              they accept—whether it’s cash, card, or mobile payment.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4 class="tw-text-3xl tw-font-semibold">Is delivery available?</h4>
+            <p class="tw-mt-2 tw-text-gray-200">
+              Currently, the cook determines whether they offer delivery,
+              pickup, or both. The cook will provide specific instructions for
+              fulfilling your order.
+            </p>
           </div>
 
-          <div
-            class="pagination-container tw-flex tw-place-content-center"
-          ></div>
+          <div class="faq-item">
+            <h4 class="tw-text-3xl tw-font-semibold">
+              How can I find meals near me?
+            </h4>
+            <p class="tw-mt-2 tw-text-gray-200">
+              Use our radius search feature to explore meals available within
+              your chosen distance, ensuring you always find options close to
+              home.
+            </p>
+          </div>
+          <!-- Do I need a business license or permit? -->
+          <div class="faq-item">
+            <h4 class="tw-text-3xl tw-font-semibold">
+              Do I need a business license or permit to cook and sell food from
+              my home?
+            </h4>
+            <p class="tw-mt-2 tw-text-gray-200">
+              Yes, in California, you’ll need a Microenterprise Home Kitchen
+              Operation (MEHKO) permit to legally cook and sell meals from your
+              home kitchen. This permit ensures compliance with local health and
+              safety regulations.
+            </p>
+          </div>
 
-          <div class="tw-flex tw-place-content-center tw-gap-6">
-            <div
-              class="testmonial-prev tw-flex tw-h-[40px] tw-w-[40px] tw-place-content-center tw-place-items-center tw-rounded-full tw-border-2 tw-border-solid tw-border-gray-300 tw-text-2xl"
-            >
-              <i class="bi bi-arrow-left"></i>
-            </div>
-            <div
-              class="testmonial-next tw-flex tw-h-[40px] tw-w-[40px] tw-place-content-center tw-place-items-center tw-rounded-full tw-border-2 tw-border-solid tw-border-gray-300 tw-text-2xl"
-            >
-              <i class="bi bi-arrow-right"></i>
-            </div>
+          <!-- How to obtain MEHKO permit -->
+          <div class="faq-item">
+            <h4 class="tw-text-3xl tw-font-semibold">
+              How do I obtain a MEHKO permit?
+            </h4>
+            <p class="tw-mt-2 tw-text-gray-200">
+              You can apply for a MEHKO permit through your county's health
+              department in California. The process usually involves filling out
+              an application, paying a fee, and passing a kitchen inspection.
+              For more detailed information, visit
+              <a
+                href="https://mehko.org"
+                class="tw-text-primary hover:underline"
+                >mehko.org</a
+              >.
+            </p>
+          </div>
+
+          <!-- How long and how much does it cost -->
+          <div class="faq-item">
+            <h4 class="tw-text-3xl tw-font-semibold">
+              How long does it take and how much does it cost to get a MEHKO
+              permit?
+            </h4>
+            <p class="tw-mt-2 tw-text-gray-200">
+              The timeline and fees for obtaining a MEHKO permit vary by county.
+              Typically, the application process takes a few weeks, and permit
+              fees usually range between $100 and $500 annually. We recommend
+              contacting your local county health department for exact details
+              or visit
+              <a
+                href="https://mehko.org"
+                class="tw-text-primary hover:underline"
+                >mehko.org</a
+              >
+            </p>
           </div>
         </div>
       </div>
@@ -478,11 +507,11 @@
           class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
         >
           <h2 class="tw-text-4xl tw-font-semibold">
-            Explore Delicious & Community-Focused Food
+            Learn About MEHKO & Home-Based Cooking
           </h2>
           <p class="tw-text-gray-600">
-            Read our blog for food inspiration, community stories, and cooking
-            tips.
+            Discover essential resources about MEHKO permits, regulations, and
+            community home cooking from mehko.org.
           </p>
         </div>
         <div
@@ -491,73 +520,45 @@
           <div
             class="reveal-up tw-flex tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4"
           >
-            <!-- <img src="./assets/images/home/sample.jpg"
-                                alt="feature1"> -->
             <div class="tw-flex tw-gap-1">
-              <i class="bi bi-mortarboard-fill tw-text-2xl"></i>
+              <i class="bi bi-file-earmark-text-fill tw-text-2xl"></i>
               <h3 class="tw-text-2xl tw-font-semibold">
-                Community Cooking 101
+                Brief Overview of MEHKO
               </h3>
             </div>
             <div class="tw-text-[#595959]">
-              Learn the basics of sharing your homemade meals and building your
-              local food network.
+              A concise summary of California's Microenterprise Home Kitchen
+              Operation program.
             </div>
-            <a href="#" class="tw-text-primary tw-font-semibold hover:underline"
+            <a
+              href="https://mehko.org/brief-overview/"
+              target="_blank"
+              class="tw-text-primary tw-font-semibold hover:underline"
               >Read More</a
             >
           </div>
+
           <div
             class="reveal-up tw-flex tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4"
           >
-            <!-- <img src="./assets/images/home/sample.jpg"
-                                alt="feature1"> -->
             <div class="tw-flex tw-gap-1">
-              <i class="bi bi-heart-fill tw-text-2xl"></i>
+              <i class="bi bi-journal-check tw-text-2xl"></i>
               <h3 class="tw-text-2xl tw-font-semibold">
-                Why Community Food Matters
+                County MEHKO Approval Guides
               </h3>
             </div>
             <div class="tw-text-[#595959]">
-              Discover the social and economic benefits of choosing
-              community-driven food over corporate chains.
+              Explore detailed guides for obtaining MEHKO approval specific to
+              your California county.
             </div>
-            <a href="#" class="tw-text-primary tw-font-semibold hover:underline"
-              >Read More</a
-            >
-          </div>
-          <div
-            class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4"
-          >
-            <!-- <img src="./assets/images/home/sample.jpg"
-                                alt="feature1"> -->
-            <div class="tw-flex tw-gap-1">
-              <i class="bi bi-lightbulb-fill tw-text-2xl"></i>
-              <h3 class="tw-text-2xl tw-font-semibold">
-                Recipe Inspiration: Cook & Share!
-              </h3>
-            </div>
-            <div class="tw-text-[#595959]">
-              Get inspired with delicious and easy recipes perfect for sharing
-              with your neighbors on Cooked Nearby.
-            </div>
-            <a href="#" class="tw-text-primary tw-font-semibold hover:underline"
+            <a
+              href="https://mehko.org/category/county-mehko-approval-guides/"
+              target="_blank"
+              class="tw-text-primary tw-font-semibold hover:underline"
               >Read More</a
             >
           </div>
         </div>
-        <a
-          href="#download"
-          aria-label="download"
-          class="reveal-up tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white tw-mt-8"
-        >
-          <span>Download App</span>
-          <div
-            class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-primary tw-font-semibold tw-text-black"
-          >
-            <i class="bi bi-download"></i>
-          </div>
-        </a>
       </div>
     </section>
 
@@ -588,9 +589,10 @@
             For Cooks
           </h3>
           <p class="tw-mt-2 tw-text-gray-600">
-            List your meals for free! We take a small, community-sustaining fee
-            only when you make a sale, ensuring you keep the majority of your
-            earnings.
+            List your meals for free! We currently don’t charge any fees, so you
+            keep 100% of your earnings. In the future, we plan to introduce a
+            small, community-sustaining fee per sale to help support the
+            platform.
           </p>
           <span class="tw-mt-auto">
             <span class="tw-font-semibold">Get Started Cooking</span>
@@ -632,27 +634,12 @@
       <div
         class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-3"
       >
-        <h2 class="tw-text-xl max-md:tw-text-lg">Stay in the Loop!</h2>
-
-        <div
-          class="tw-flex tw-h-[60px] tw-place-items-center tw-gap-2 tw-overflow-hidden tw-p-2"
-        >
-          <input
-            type="email"
-            class="input tw-h-full tw-w-full tw-p-2 tw-outline-none"
-            placeholder="Your email address"
-          />
-          <a
-            class="btn tw-transition-colors tw-duration-[0.3s]"
-            href=""
-            aria-label="Sign up for newsletter"
-          >
-            Signup
-          </a>
-        </div>
+        <script
+          type="text/javascript"
+          src="https://form.jotform.com/jsform/250784644341156"
+        ></script>
       </div>
     </section>
-
     <footer
       class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] tw-text-black max-md:tw-flex-col"
     >
@@ -666,20 +653,20 @@
           class="tw-max-w-[120px]"
         />
         <div>Los Angeles, CA</div>
-        <div class="tw-mt-3 tw-text-lg tw-font-semibold">Follow us</div>
-        <div class="tw-flex tw-gap-4 tw-text-2xl">
+        <!-- <div class="tw-mt-3 tw-text-lg tw-font-semibold">Follow us</div> -->
+        <!-- <div class="tw-flex tw-gap-4 tw-text-2xl">
           <a
             href="https://facebook.com/your-facebook-page"
             aria-label="Facebook"
           >
-            <!-- Replace with your Facebook page -->
+            
             <i class="bi bi-facebook"></i>
           </a>
           <a
             href="https://twitter.com/your-twitter-handle"
             aria-label="Twitter"
           >
-            <!-- Replace with your Twitter handle -->
+            
             <i class="bi bi-twitter"></i>
           </a>
           <a
@@ -687,10 +674,10 @@
             aria-label="Instagram"
             class="tw-h-[40px] tw-w-[40px]"
           >
-            <!-- Replace with your Instagram handle -->
+            
             <i class="bi bi-instagram"></i>
           </a>
-        </div>
+        </div> -->
       </div>
 
       <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
@@ -706,9 +693,11 @@
         <h2 class="tw-text-3xl max-md:tw-text-xl">Resources</h2>
         <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
           <!-- <a href="#about" class="footer-link">About us</a> -->
+          <a href="#customers" class="footer-link">For Customers</a>
           <a href="#cooks" class="footer-link">For Cooks</a>
-          <a href="#contact" class="footer-link">Contact Us</a>
+          <a href="#faq" class="footer-link">FAQ</a>
           <a href="#blog" class="footer-link">Blog</a>
+          <a href="#contact" class="footer-link">Contact Us</a>
           <!-- <a href="#privacy-policy" class="footer-link">Privacy policy</a> -->
         </div>
       </div>

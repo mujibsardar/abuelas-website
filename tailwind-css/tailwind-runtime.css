@@ -554,6 +554,10 @@ video {
   display: none;
 }
 
+.tw-fixed {
+  position: fixed;
+}
+
 .tw-absolute {
   position: absolute;
 }
@@ -566,12 +570,20 @@ video {
   bottom: 0px;
 }
 
+.tw-bottom-5 {
+  bottom: 1.25rem;
+}
+
 .tw-left-1\/2 {
   left: 50%;
 }
 
 .tw-right-3 {
   right: 0.75rem;
+}
+
+.tw-right-5 {
+  right: 1.25rem;
 }
 
 .tw-top-0 {
@@ -592,11 +604,6 @@ video {
 
 .tw-z-\[1\] {
   z-index: 1;
-}
-
-.tw-mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .tw-mt-10 {
@@ -635,10 +642,6 @@ video {
   display: flex;
 }
 
-.tw-h-\[150px\] {
-  height: 150px;
-}
-
 .tw-h-\[200px\] {
   height: 200px;
 }
@@ -675,11 +678,6 @@ video {
   height: 80px;
 }
 
-.tw-h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 .tw-h-full {
   height: 100%;
 }
@@ -706,10 +704,6 @@ video {
 
 .tw-min-h-\[80vh\] {
   min-height: 80vh;
-}
-
-.tw-w-\[150px\] {
-  width: 150px;
 }
 
 .tw-w-\[250px\] {
@@ -862,18 +856,14 @@ video {
   gap: 10%;
 }
 
-.tw-gap-\[20px\] {
-  gap: 20px;
-}
-
 .tw-gap-\[5\%\] {
   gap: 5%;
 }
 
-.tw-space-y-8 > :not([hidden]) ~ :not([hidden]) {
+.tw-space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .tw-overflow-hidden {
@@ -898,19 +888,6 @@ video {
 
 .tw-rounded-xl {
   border-radius: 0.75rem;
-}
-
-.tw-border-2 {
-  border-width: 2px;
-}
-
-.tw-border-solid {
-  border-style: solid;
-}
-
-.tw-border-gray-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
 }
 
 .tw-bg-\[\#FFEB99\] {
@@ -1064,6 +1041,11 @@ video {
   line-height: 1.75rem;
 }
 
+.tw-text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .tw-font-medium {
   font-weight: 500;
 }
@@ -1099,6 +1081,11 @@ video {
   color: rgb(229 231 235 / var(--tw-text-opacity, 1));
 }
 
+.tw-text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+
 .tw-text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
@@ -1131,19 +1118,20 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.tw-outline-none {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.tw-transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+.tw-transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.tw-duration-\[0\.3s\] {
-  transition-duration: 0.3s;
+.tw-duration-300 {
+  transition-duration: 300ms;
+}
+
+.hover\:tw-bg-opacity-90:hover {
+  --tw-bg-opacity: 0.9;
 }
 
 @media not all and (min-width: 1280px) {
@@ -1163,10 +1151,6 @@ video {
 
   .max-lg\:tw-mt-\[30px\] {
     margin-top: 30px;
-  }
-
-  .max-lg\:tw-h-\[80px\] {
-    height: 80px;
   }
 
   .max-lg\:tw-h-fit {
@@ -1192,10 +1176,6 @@ video {
 
   .max-lg\:tw-w-\[320px\] {
     width: 320px;
-  }
-
-  .max-lg\:tw-w-\[80px\] {
-    width: 80px;
   }
 
   .max-lg\:tw-min-w-\[320px\] {
@@ -1264,18 +1244,9 @@ video {
     flex-direction: column;
   }
 
-  .max-md\:tw-place-content-center {
-    place-content: center;
-  }
-
   .max-md\:tw-text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .max-md\:tw-text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .max-md\:tw-text-sm {
