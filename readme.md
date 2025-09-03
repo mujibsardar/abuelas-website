@@ -1,36 +1,51 @@
 
->[!NOTE]
-This theme uses GSAP library, make sure to refer to their licensing.
+# Abuela's - Simple Static Website
 
+A clean, simple static website for Abuela's - Community Meals, Real Connections.
 
-**Github**: https://github.com/PaulleDemon/awesome-landing-pages
+## Features
+
+- **Static HTML/CSS/JS**: No build process required
+- **Tailwind CSS**: Loaded via CDN for easy styling
+- **GSAP Animations**: Smooth scroll animations and effects
+- **Responsive Design**: Works on all devices
+- **MEHKO Integration**: Direct link to permit applications
 
 ## Usage
 
-* This template uses tailwind css every tailwind class are prefixed with `tw-`, to help differentiate
-  between tailwind classes and other classes  
+Simply open `index.html` in a web browser or serve the files from any web server.
 
-During development add the following to head tag
+### Dependencies (CDN)
+- Tailwind CSS: `https://cdn.tailwindcss.com`
+- GSAP: `https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js`
+- Bootstrap Icons: `https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css`
 
-```html
-<link rel="stylesheet" href="tailwind-runtime.css"><!--replace with path to your tailwind runtime-->
+### File Structure
 ```
-During production use
-
-```html
-<link rel="stylesheet" href="tailwind-build.css"><!--replace with path to your tailwind build-->
+/
+├── index.html              # Main landing page
+├── privacy.html            # Privacy policy
+├── terms.html              # Terms of service
+├── influencer-agreement.html # Influencer agreement
+├── index.js                # JavaScript functionality
+├── assets/                 # Images and logos
+│   ├── abuelas_logo.png    # Main logo
+│   ├── favicon.png         # Site favicon
+│   └── images/             # All other images
+└── css/
+    └── index.css           # Custom styles
 ```
 
-To start Tailwind during development use
-```html
-npm run start:tailwind
-```
+## Deployment
 
-To create a build file use
-```html
-npm run build:tailwind
-```
+This is a simple static site that can be deployed to any web hosting service:
+- GitHub Pages
+- Netlify
+- Vercel
+- Any web server
 
-Theme: 
-1. #BFFE66
-2. #000
+Just upload all files and you're ready to go!
+
+## Theme Colors
+- Primary: #BFFE66
+- Secondary: #000

@@ -119,7 +119,7 @@ sections.forEach((sec) => {
 const downloadLink = document.getElementById("download-link");
 const downloadText = document.getElementById("download-text");
 
-const appStoreLink = "https://apps.apple.com/us/app/cooked-nearby/id6740445540"; // Replace with your actual App Store URL
+const appStoreLink = "https://apps.apple.com/us/app/abuelas/id6740445540"; // Replace with your actual App Store URL
 
 function updateDownloadLink() {
   const ua = navigator.userAgent;
