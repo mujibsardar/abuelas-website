@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-:root{
+:root {
 
-    --btn-color: #fdfdfd;/* button color*/
-    --btn-bg: #0d0d0d;/* button bg color*/
+    --btn-color: #fdfdfd;
+    /* button color*/
+    --btn-bg: #0d0d0d;
+    /* button bg color*/
 
     --primary-text-color: #000;
     --link-hover: #6dbb00;
@@ -17,13 +19,13 @@ html {
     font-family: "Roboto", sans-serif;
 }
 
-header{
+header {
     /* background-color: #fff;
     color: #000; */
 }
 
 
-header > .collapsible-header{
+header>.collapsible-header {
     display: flex;
     gap: 1rem;
     width: 100%;
@@ -33,7 +35,7 @@ header > .collapsible-header{
     transition: width 0.3s ease;
 }
 
-.animated-collapse{
+.animated-collapse {
     transition: width 0.3s ease;
 }
 
@@ -51,23 +53,23 @@ header > .collapsible-header{
     color: var(--link-hover);
 }
 
-.material-icons.md-40 { 
-    font-size: 40px; 
+.material-icons.md-40 {
+    font-size: 40px;
 }
 
-.primary-text-color{
+.primary-text-color {
     color: var(--primary-text-color);
 }
 
-.opacity-0{
+.opacity-0 {
     opacity: 0 !important;
 }
 
-.opacity-100{
+.opacity-100 {
     opacity: 100 !important;
 }
 
-.btn{
+.btn {
     padding: 10px 15px;
     width: max-content;
     border-radius: 25px;
@@ -79,15 +81,13 @@ header > .collapsible-header{
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {}
 
-}
-
-.btn:disabled{
+.btn:disabled {
     cursor: default;
 }
 
-.input{
+.input {
     padding: 10px;
     background-color: transparent;
     border-radius: 25px;
@@ -97,15 +97,17 @@ header > .collapsible-header{
     transition: border 0.3s;
 }
 
-.input:active, .input:focus, .input:focus-within{
+.input:active,
+.input:focus,
+.input:focus-within {
     border: 2px solid var(--input-focus-bd-color);
 }
 
-.input-error{
+.input-error {
     border-bottom: 3px solid #ff1e1e;
 }
 
-.input-error:focus-within{
+.input-error:focus-within {
     border-bottom: 3px solid #fd0101;
 }
 
@@ -116,12 +118,12 @@ header > .collapsible-header{
     margin-top: 20px;
 }
 
-.footer-link{
+.footer-link {
     color: #0d0d0d;
     transition: color 0.3s;
 }
 
-.footer-link:hover{
+.footer-link:hover {
     color: var(--footer-link-hover);
 }
 
@@ -132,7 +134,7 @@ header > .collapsible-header{
     margin: auto;
 }
 
-.review-card{
+.review-card {
     box-shadow: 0px 2px 4px #757474a0;
     border-radius: 15px;
     /* width: 200px; */
@@ -192,8 +194,12 @@ header > .collapsible-header{
         box-shadow: 2px 0px 3px #000;
     }
 
-    .header-links{
+    .header-links {
         color: black;
     }
-    
+
+}
+
+#news {
+    margin-top: 3%;
 }
