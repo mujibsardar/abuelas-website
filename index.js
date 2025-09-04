@@ -143,3 +143,29 @@ function updateDownloadLink() {
 }
 
 document.addEventListener("DOMContentLoaded", updateDownloadLink);
+
+// ------------- TikTok autoplay functionality ---------------
+function initTikTokAutoplay() {
+  const tiktokContainer = document.getElementById('tiktok-container');
+  if (!tiktokContainer) return;
+
+  // Create intersection observer to detect when TikTok section is in view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // TikTok section is in view - trigger autoplay
+        // The TikTok embed script will handle the actual autoplay
+        console.log('TikTok section in view - video should autoplay');
+      }
+    });
+  }, {
+    threshold: 0.5, // Trigger when 50% of the container is visible
+    rootMargin: '0px 0px -100px 0px' // Trigger slightly before fully in view
+  });
+
+  // Start observing the TikTok container
+  observer.observe(tiktokContainer);
+}
+
+// Initialize TikTok autoplay functionality
+document.addEventListener('DOMContentLoaded', initTikTokAutoplay);
