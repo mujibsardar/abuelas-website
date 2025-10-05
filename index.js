@@ -119,13 +119,13 @@ sections.forEach((sec) => {
 const downloadLink = document.getElementById("download-link");
 const downloadText = document.getElementById("download-text");
 
-const appStoreLink = "https://apps.apple.com/us/app/abuelas/id6740445540"; // Replace with your actual App Store URL
+const appStoreLink = "https://apps.apple.com/us/app/abuelas/id6751931960"; // Replace with your actual App Store URL
 
 function updateDownloadLink() {
   const ua = navigator.userAgent;
   let linkSupported = false;
 
-  if (/iPhone|iPad|iPod/i.test(ua)) {
+  if (/iPhone|iPad|iPod|iOS/i.test(ua)) {
     downloadLink.href = appStoreLink;
     linkSupported = true;
   }
