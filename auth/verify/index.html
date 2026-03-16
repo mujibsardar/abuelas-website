@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Email | Abuela's</title>
+    <link rel="shortcut icon" href="../../assets/favicon.png" type="image/x-icon" />
+    <meta name="robots" content="noindex,nofollow" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 480px;
+        margin: 40px auto;
+        padding: 0 20px;
+        background-color: #fff;
+        color: #333;
+      }
+      h1, h2 { color: #2c3e50; }
+      h1 {
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+      }
+      a { color: #3498db; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .state { display: none; }
+      .state.active { display: block; }
+      .card {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 24px;
+        background: #fafafa;
+        margin: 20px 0;
+        text-align: center;
+      }
+      .card.success { border-color: #2e7d32; background: #e8f5e9; }
+      .card.error { border-color: #c62828; background: #ffebee; }
+      .btn {
+        display: inline-block;
+        margin-top: 16px;
+        padding: 12px 24px;
+        background: #2c3e50;
+        color: #fff;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+      .btn:hover { background: #1a252f; color: #fff; text-decoration: none; }
+      .muted { color: #777; font-size: 0.9em; }
+    </style>
+  </head>
+  <body>
+    <div style="text-align: center; margin-bottom: 24px; padding: 16px 0; border-bottom: 2px solid #2c3e50;">
+      <a href="../../index.html" style="text-decoration: none;">
+        <img src="../../assets/abuelas_logo.png" alt="Abuela's" style="max-width: 120px; height: auto;" />
+      </a>
+    </div>
+
+    <h1>Email verification</h1>
+
+    <div id="state-verifying" class="state active">
+      <div class="card">
+        <p>Verifying your email…</p>
+      </div>
+    </div>
+
+    <div id="state-success" class="state">
+      <div class="card success">
+        <p><strong>Your email is verified.</strong></p>
+        <a href="abuelas://verify-success" class="btn">Open Abuela's app</a>
+        <p class="muted" style="margin-top: 16px;">If the app doesn't open, return to the app and tap “I already verified”.</p>
+      </div>
+    </div>
+
+    <div id="state-invalid" class="state">
+      <div class="card error">
+        <p><strong>Invalid link.</strong></p>
+        <p class="muted">This verification link is not valid. Request a new one from the app.</p>
+      </div>
+    </div>
+
+    <div id="state-expired" class="state">
+      <div class="card error">
+        <p><strong>Link expired.</strong></p>
+        <p class="muted">This link has expired. Request a new verification email from the app.</p>
+      </div>
+    </div>
+
+    <div id="state-already-used" class="state">
+      <div class="card error">
+        <p><strong>Link already used.</strong></p>
+        <p class="muted">This verification link was already used. Open the app to continue.</p>
+      </div>
+    </div>
+
+    <div id="state-already-verified" class="state">
+      <div class="card success">
+        <p><strong>Already verified.</strong></p>
+        <p class="muted">Your email is already verified. You can open the app.</p>
+        <a href="abuelas://verify-success" class="btn">Open Abuela's app</a>
+      </div>
+    </div>
+
+    <div id="state-error" class="state">
+      <div class="card error">
+        <p><strong>Something went wrong.</strong></p>
+        <p class="muted">We couldn't complete verification. Try again or contact support.</p>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        // Set this to your deployed verifyEmailToken HTTPS endpoint (e.g. Firebase Callable URL).
+        var VERIFY_ENDPOINT = 'https://us-central1-abuelas-e62fc.cloudfunctions.net/verifyEmailToken';
+
+        function showState(id) {
+          document.querySelectorAll('.state').forEach(function (el) { el.classList.remove('active'); });
+          var el = document.getElementById('state-' + id);
+          if (el) el.classList.add('active');
+        }
+
+        function getToken() {
+          var params = new URLSearchParams(window.location.search);
+          return params.get('token') || params.get('t') || '';
+        }
+
+        function run() {
+          var token = getToken();
+          if (!token) {
+            showState('invalid');
+            return;
+          }
+
+          if (!VERIFY_ENDPOINT || VERIFY_ENDPOINT.indexOf('YOUR_') === 0) {
+            showState('error');
+            return;
+          }
+
+          // Firebase Callable format: { data: { token } }. If your backend expects { token }, change the body below.
+          fetch(VERIFY_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ data: { token: token } })
+          })
+            .then(function (res) { return res.json().catch(function () { return {} }); })
+            .then(function (data) {
+              var result = data && data.result;
+              var status = (result && typeof result.status === 'string') ? result.status : (result && typeof result === 'string') ? result : (data && data.status) ? data.status : '';
+              if (status === 'success') showState('success');
+              else if (status === 'invalid') showState('invalid');
+              else if (status === 'expired') showState('expired');
+              else if (status === 'already_used') showState('already-used');
+              else if (status === 'already_verified') showState('already-verified');
+              else showState('error');
+            })
+            .catch(function () { showState('error'); });
+        }
+
+        run();
+      })();
+    </script>
+  </body>
+</html>
