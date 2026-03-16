@@ -136,11 +136,14 @@
             return;
           }
 
-          // Firebase Callable format: { data: { token } }. If your backend expects { token }, change the body below.
+          var payload = { token: token };
+          console.log('[verify] token extracted from URL:', token);
+          console.log('[verify] request payload being sent:', payload);
+
           fetch(VERIFY_ENDPOINT, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ data: { token: token } })
+            body: JSON.stringify(payload)
           })
             .then(function (res) { return res.json().catch(function () { return {} }); })
             .then(function (data) {
