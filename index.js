@@ -120,6 +120,7 @@ const downloadLink = document.getElementById("download-link");
 const downloadText = document.getElementById("download-text");
 
 const appStoreLink = "https://apps.apple.com/us/app/abuelas/id6751931960"; // Replace with your actual App Store URL
+const playStoreLink = "https://play.google.com/store/apps/details?id=app.abuelas&pcampaignid=web_share";
 
 function updateDownloadLink() {
   const ua = navigator.userAgent;
@@ -128,6 +129,9 @@ function updateDownloadLink() {
   if (/iPhone|iPad|iPod|iOS/i.test(ua)) {
     downloadLink.href = appStoreLink;
     linkSupported = true;
+  } else if (/Android/i.test(ua)) {
+    downloadLink.href = playStoreLink;
+    linkSupported = true;
   }
 
   if (!linkSupported) {
@@ -135,7 +139,7 @@ function updateDownloadLink() {
     downloadLink.onclick = (e) => {
       e.preventDefault();
       alert(
-        "Your platform is currently not supported. The app is only available for iOS devices at this time."
+        "Your platform is currently not supported. The app is available on iOS and Android devices."
       );
     };
     downloadText.textContent = "App Unavailable for your Platform";
